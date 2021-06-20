@@ -1,3 +1,13 @@
 
 pip install -r requirements.txt
 pip freeze > requirements.txt
+
+python -m unittest -v test_main_script
+
+python -m doctest main_script
+
+coverage run test_main_script.py
+coverage report -m main_script.py
+coverage erase
+
+flake8 main_script.py
